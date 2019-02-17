@@ -50,6 +50,7 @@ window.addEventListener('load', () => {
   webrtc.on('videoAdded', (video, peer) => {
     // eslint-disable-next-line no-console
     const id = webrtc.getDomId(peer);
+    console.log(peer)
     const html = remoteVideoTemplate({ id });
     if (remoteVideosCount === 0) {
       remoteVideosEl.html(html);
